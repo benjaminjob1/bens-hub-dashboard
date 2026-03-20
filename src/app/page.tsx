@@ -18,7 +18,7 @@ import {
 
 const links = [
   { name: "Stats", url: "https://benjob.me/stats", icon: Activity, desc: "Bot statistics & metrics" },
-  { name: "Stocks", url: "https://benjob.me/stocks", icon: Zap, desc: "Stock watchlist" },
+  { name: "Stocks", url: "https://stocks.benjob.me", icon: Zap, desc: "Stock watchlist" },
   { name: "Website", url: "https://benjob.me/website", icon: Globe, desc: "Portfolio site" },
   { name: "Commands", url: "https://benjob.me/stats/commands", icon: Bot, desc: "Bot commands" },
 ];
