@@ -189,7 +189,7 @@ export default function Home() {
         onClick={() => setShowWorkInProgress(!showWorkInProgress)}
         whileHover={{ scale: 1.01 }}
         whileTap={{ scale: 0.99 }}
-        className={`w-full mb-4 flex items-center justify-between p-4 rounded-xl transition-all duration-300 ${
+        className={`w-full mb-2 flex items-center justify-between p-4 rounded-xl transition-all duration-300 ${
           isDark 
             ? "bg-amber-500/20 hover:bg-amber-500/30 text-amber-400 border border-amber-500/30" 
             : "bg-amber-100 hover:bg-amber-200 text-amber-700 border border-amber-200"
@@ -198,6 +198,22 @@ export default function Home() {
         <span className="font-medium">Show work in progress</span>
         <span className="text-xl">{showWorkInProgress ? '🔓' : '🔒'}</span>
       </motion.button>
+
+      {/* Work in Progress Items - show right after button */}
+      {showWorkInProgress && workInProgress.length > 0 && (
+        <motion.div
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: "auto" }}
+          exit={{ opacity: 0, height: 0 }}
+          className="mb-4"
+        >
+          <GlassCard title="🚧 In Development">
+            {workInProgress.map((item) => (
+              <LinkCard key={item.id} item={item} />
+            ))}
+          </GlassCard>
+        </motion.div>
+      )}
 
       {/* Apps Section */}
       <GlassCard title="Dashboards">
@@ -233,15 +249,6 @@ export default function Home() {
           <LinkCard key={item.id} item={item} />
         ))}
       </GlassCard>
-
-      {/* Work in Progress Items */}
-      {showWorkInProgress && workInProgress.length > 0 && (
-        <GlassCard title="🚧 In Development">
-          {workInProgress.map((item) => (
-            <LinkCard key={item.id} item={item} />
-          ))}
-        </GlassCard>
-      )}
     </Layout>
   );
 }
