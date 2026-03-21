@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, createContext, useContext, ReactNode } from "react";
-import { Moon, Sun } from "lucide-react";
+import { Moon, Sun, MapPin, Mail } from "lucide-react";
 
 interface ThemeContextType {
   isDark: boolean;
@@ -19,6 +19,15 @@ interface LayoutProps {
   title: string;
   subtitle: string;
 }
+
+// Ben's profile info
+const PROFILE = {
+  name: "Benjamin Job",
+  location: "Maville, France",
+  email: "Benjamin.job@gwern.co.uk",
+  botEmail: "bensbot@agentmail.to",
+  gravatarUrl: "https://www.gravatar.com/avatar/46e5d1ddbdadfadf700f0c15bf6591e3?default=mp&s=200",
+};
 
 export default function Layout({ children, title, subtitle }: LayoutProps) {
   const [isDark, setIsDark] = useState(true);
@@ -47,10 +56,29 @@ export default function Layout({ children, title, subtitle }: LayoutProps) {
         {/* Glass header */}
         <header className={`sticky top-0 z-50 ${isDark ? "bg-gray-900/70 border-gray-800" : "bg-white/70 border-gray-200"} backdrop-blur-xl border-b`}>
           <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+            {/* Left: Title */}
             <div>
               <h1 className={`text-xl font-bold ${isDark ? "text-white" : "text-gray-900"}`}>{title}</h1>
               <p className={`text-sm ${isDark ? "text-gray-400" : "text-gray-500"}`}>{subtitle}</p>
             </div>
+
+            {/* Center: Profile */}
+            <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-3">
+              <img 
+                src={PROFILE.gravatarUrl} 
+                alt={PROFILE.name}
+                className="w-10 h-10 rounded-full border-2 border-gray-500"
+              />
+              <div className={`text-center ${isDark ? "text-gray-300" : "text-gray-700"}`}>
+                <p className="text-sm font-semibold">{PROFILE.name}</p>
+                <div className="flex items-center gap-1 text-xs text-muted-foreground">
+                  <MapPin size={10} />
+                  <span>{PROFILE.location}</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Right: Theme toggle */}
             <button
               onClick={toggle}
               className={`p-2.5 rounded-xl transition-all duration-300 ${
@@ -62,6 +90,18 @@ export default function Layout({ children, title, subtitle }: LayoutProps) {
             >
               {isDark ? <Moon size={18} /> : <Sun size={18} />}
             </button>
+          </div>
+          
+          {/* Email row */}
+          <div className={`max-w-5xl mx-auto px-6 pb-3 flex justify-center gap-6 text-xs ${isDark ? "text-gray-500" : "text-gray-400"}`}>
+            <a href={`mailto:${PROFILE.email}`} className="flex items-center gap-1 hover:text-primary transition-colors">
+              <Mail size={12} />
+              {PROFILE.email}
+            </a>
+            <a href={`mailto:${PROFILE.botEmail}`} className="flex items-center gap-1 hover:text-primary transition-colors">
+              <Mail size={12} />
+              {PROFILE.botEmail}
+            </a>
           </div>
         </header>
         
