@@ -71,7 +71,7 @@ export default function Layout({ children, title, subtitle }: LayoutProps) {
                   alt={PROFILE.name}
                   className="w-10 h-10 rounded-full border-2 border-gray-500"
                 />
-                <div className={`hidden sm:block ${isDark ? "text-gray-300" : "text-gray-700"}`}>
+                <div className={`${isDark ? "text-gray-300" : "text-gray-700"}`}>
                   <p className="text-sm font-semibold">{PROFILE.name}</p>
                   <div className="flex items-center gap-1 text-xs text-muted-foreground">
                     <MapPin size={10} />
