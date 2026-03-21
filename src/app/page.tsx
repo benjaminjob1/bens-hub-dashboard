@@ -347,7 +347,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="flex items-center gap-3 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors"
           >
-            <span className="text-2xl">🤖</span>
+            <span className="text-2xl">👤🤖</span>
             <span className="text-sm font-medium">Ben & Ben Bot's GitHub</span>
           </a>
         </div>
