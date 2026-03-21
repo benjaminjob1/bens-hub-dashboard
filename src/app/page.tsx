@@ -5,62 +5,49 @@ import { motion } from "framer-motion";
 import Layout from "../components/Layout";
 import { useTheme } from "../components/Layout";
 
-const webProperties = [
+const apps = [
   {
     id: '1',
-    title: 'Splash Page',
-    description: 'My splash page',
-    url: 'https://msha.ke/benjaminjobprojects',
-    icon: '✨',
-    color: 'bg-gradient-to-br from-orange-400 to-orange-600',
-    workInProgress: true,
-  },
-  {
-    id: '2',
-    title: 'My Webpage',
-    description: "View my projects and portfolio",
-    url: 'https://benjaminjob.wixsite.com/projects',
-    icon: '🌐',
-    color: 'bg-gradient-to-br from-blue-400 to-blue-600',
-    workInProgress: true,
-  },
-  {
-    id: '3',
     title: 'Software Releases',
     description: 'Track software releases',
     url: 'https://software.benjob.me',
     icon: '💻',
     color: 'bg-gradient-to-br from-green-400 to-green-600',
-    workInProgress: false,
   },
   {
-    id: '4',
+    id: '2',
     title: 'Tech Events',
     description: 'Stay updated with tech events',
     url: 'https://events.benjob.me',
     icon: '📅',
     color: 'bg-gradient-to-br from-purple-400 to-purple-600',
-    workInProgress: false,
   },
   {
-    id: '5',
+    id: '3',
     title: 'Stocks',
     description: 'Tech stock dashboard',
     url: 'https://stocks.benjob.me',
     icon: '📈',
     color: 'bg-gradient-to-br from-emerald-400 to-emerald-600',
-    workInProgress: false,
   },
 ];
 
-const shortcuts = [
+const workInProgress = [
   {
-    id: 's1',
-    title: 'AirFry Convert',
-    description: 'Convert (fan) oven temps & times to air fryer',
-    url: 'https://www.icloud.com/shortcuts/f021041cfa3040af8c6bc9f6fc3dd808',
-    icon: '🌡️',
-    color: 'bg-gradient-to-br from-red-400 to-red-600',
+    id: 'w1',
+    title: 'Splash Page',
+    description: 'My splash page',
+    url: 'https://msha.ke/benjaminjobprojects',
+    icon: '✨',
+    color: 'bg-gradient-to-br from-orange-400 to-orange-600',
+  },
+  {
+    id: 'w2',
+    title: 'My Webpage',
+    description: "View my projects and portfolio",
+    url: 'https://benjaminjob.wixsite.com/projects',
+    icon: '🌐',
+    color: 'bg-gradient-to-br from-blue-400 to-blue-600',
   },
 ];
 
@@ -94,6 +81,37 @@ const techSections = [
   },
 ];
 
+const shortcuts = [
+  {
+    id: 's1',
+    title: 'AirFry Convert',
+    description: 'Convert (fan) oven temps & times to air fryer',
+    url: 'https://www.icloud.com/shortcuts/f021041cfa3040af8c6bc9f6fc3dd808',
+    icon: '🌡️',
+    color: 'bg-gradient-to-br from-red-400 to-red-600',
+  },
+  {
+    id: 's2',
+    title: 'Quick Links',
+    description: 'App Store • TestFlight',
+    url: '#',
+    icon: '⚡',
+    color: 'bg-gradient-to-br from-yellow-400 to-orange-500',
+    isSection: true,
+  },
+];
+
+const community = [
+  {
+    id: 'c1',
+    title: 'Discord Community',
+    description: 'Join our Discord community for discussions and support',
+    url: 'https://discord.gg/7wyK2Gcw2',
+    icon: '💬',
+    color: 'bg-gradient-to-br from-indigo-500 to-purple-600',
+  },
+];
+
 const socialLinks = [
   {
     id: 'li',
@@ -104,7 +122,7 @@ const socialLinks = [
   },
   {
     id: 'lt',
-    title: 'LinkTree',
+    title: 'All Links (LinkTree)',
     url: 'https://linktr.ee/benjaminjob',
     icon: '🔗',
     color: 'bg-gradient-to-br from-green-400 to-green-600',
@@ -123,7 +141,7 @@ function LinkCard({ item }: { item: any }) {
       animate={{ opacity: 1, y: 0 }}
       whileHover={{ scale: 1.02, y: -2 }}
       whileTap={{ scale: 0.98 }}
-      className={`${item.color} relative overflow-hidden rounded-2xl p-4 text-white flex items-center gap-4 cursor-pointer transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-${item.color.split(' ')[1].replace('to-', '')}/20`}
+      className={`${item.color} relative overflow-hidden rounded-2xl p-4 text-white flex items-center gap-4 cursor-pointer transition-all duration-300 shadow-lg hover:shadow-xl`}
     >
       <div className="absolute inset-0 bg-white/10 backdrop-blur-sm opacity-0 hover:opacity-100 transition-opacity" />
       <div className="relative w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center text-2xl shadow-inner">
@@ -157,11 +175,8 @@ export default function Home() {
   const [showWorkInProgress, setShowWorkInProgress] = useState(false);
   const { isDark } = useTheme();
 
-  const projectItems = webProperties.filter(item => item.workInProgress);
-  const appItems = webProperties.filter(item => !item.workInProgress);
-
   return (
-    <Layout title="Ben's Hub" subtitle="Your personal command center">
+    <Layout title="Ben's Hub" subtitle="Choose what you'd like to view">
       {/* Social Links */}
       <GlassCard title="Connect">
         {socialLinks.map((item) => (
@@ -180,46 +195,49 @@ export default function Home() {
             : "bg-amber-100 hover:bg-amber-200 text-amber-700 border border-amber-200"
         }`}
       >
-        <span className="font-medium">Work in Progress</span>
+        <span className="font-medium">Show work in progress</span>
         <span className="text-xl">{showWorkInProgress ? '🔓' : '🔒'}</span>
       </motion.button>
 
       {/* Apps Section */}
-      {appItems.length > 0 && (
-        <GlassCard title="Dashboards">
-          {appItems.map((item) => (
-            <LinkCard key={item.id} item={item} />
-          ))}
-        </GlassCard>
-      )}
+      <GlassCard title="Dashboards">
+        {apps.map((item) => (
+          <LinkCard key={item.id} item={item} />
+        ))}
+      </GlassCard>
 
       {/* My Projects */}
-      <GlassCard title="Projects">
+      <GlassCard title="My Projects">
         {myProjects.map((item) => (
           <LinkCard key={item.id} item={item} />
         ))}
       </GlassCard>
 
       {/* Tech Sections */}
-      <GlassCard title="Tech & AI">
+      <GlassCard title="Tech">
         {techSections.map((item) => (
           <LinkCard key={item.id} item={item} />
         ))}
       </GlassCard>
 
       {/* Shortcuts */}
-      {shortcuts.length > 0 && (
-        <GlassCard title="Quick Tools">
-          {shortcuts.map((item) => (
-            <LinkCard key={item.id} item={item} />
-          ))}
-        </GlassCard>
-      )}
+      <GlassCard title="Shortcuts">
+        {shortcuts.map((item) => (
+          <LinkCard key={item.id} item={item} />
+        ))}
+      </GlassCard>
+
+      {/* Community */}
+      <GlassCard title="Community">
+        {community.map((item) => (
+          <LinkCard key={item.id} item={item} />
+        ))}
+      </GlassCard>
 
       {/* Work in Progress Items */}
-      {showWorkInProgress && projectItems.length > 0 && (
+      {showWorkInProgress && workInProgress.length > 0 && (
         <GlassCard title="🚧 In Development">
-          {projectItems.map((item) => (
+          {workInProgress.map((item) => (
             <LinkCard key={item.id} item={item} />
           ))}
         </GlassCard>
