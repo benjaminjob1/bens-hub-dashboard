@@ -26,7 +26,7 @@ const PROFILE = {
   location: "Marseille, France",
   email: "Benjamin.job@gwern.co.uk",
   botEmail: "bensbot@agentmail.to",
-  gravatarUrl: "https://www.gravatar.com/avatar/46e5d1ddbdadfadf700f0c15bf6591e3?default=mp&s=200",
+  gravatarUrl: "https://www.gravatar.com/avatar/9a582e06ac55cf837d1a8767a1bbe438?default=mp&s=200",
 };
 
 export default function Layout({ children, title, subtitle }: LayoutProps) {
