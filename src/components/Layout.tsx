@@ -71,23 +71,24 @@ export default function Layout({ children, title, subtitle }: LayoutProps) {
                   alt={PROFILE.name}
                   className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-gray-500"
                 />
-                <div className={`hidden sm:block ${isDark ? "text-gray-300" : "text-gray-700"}`}>
-                  <p className="text-sm font-semibold">{PROFILE.name}</p>
-                  <div className="flex items-center gap-1 text-xs text-muted-foreground">
-                    <MapPin size={10} />
-                    <span>{PROFILE.location}</span>
+                <div className={`text-xs sm:text-sm ${isDark ? "text-gray-300" : "text-gray-700"}`}>
+                  <p className="font-semibold leading-tight">{PROFILE.name}</p>
+                  <div className="flex items-center gap-1 text-muted-foreground">
+                    <MapPin size={8} />
+                    <span className="hidden xs:inline">{PROFILE.location}</span>
+                    <span className="xs:hidden">Marseille</span>
                   </div>
                 </div>
                 <button
                   onClick={toggle}
-                  className={`p-2 rounded-xl transition-all duration-300 ${
+                  className={`p-1.5 sm:p-2 rounded-lg sm:rounded-xl transition-all duration-300 ${
                     isDark 
                       ? "bg-gray-800/60 hover:bg-gray-700/80 text-yellow-400 border border-gray-700/50" 
                       : "bg-white/60 hover:bg-white/90 text-indigo-600 border border-gray-200/50"
                   } backdrop-blur-md shadow-lg`}
                   aria-label="Toggle theme"
                 >
-                  {isDark ? <Moon size={16} /> : <Sun size={16} />}
+                  {isDark ? <Moon size={14} /> : <Sun size={14} />}
                 </button>
               </div>
             </div>
