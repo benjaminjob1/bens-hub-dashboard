@@ -1,257 +1,233 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { 
-  Clock, 
+  Globe, 
+  CodeSlash, 
   Calendar, 
-  Cloud, 
-  MapPin, 
-  ExternalLink, 
-  Bot, 
-  Server, 
-  HardDrive,
-  Activity,
-  Link2,
-  Zap
-} from "lucide-react";
+  Briefcase, 
+  GameController, 
+  Settings, 
+  Thermometer, 
+  Link,
+  ChevronRight,
+  ExternalLink
+} from "@mui/icons-material";
 
-const links = [
-  { name: "Stats", url: "https://benjob.me/stats", icon: Activity, desc: "Bot statistics & metrics" },
-  { name: "Stocks", url: "https://stocks.benjob.me", icon: Zap, desc: "Stock watchlist" },
-  { name: "Website", url: "https://benjob.me/website", icon: Globe, desc: "Portfolio site" },
-  { name: "Commands", url: "https://benjob.me/stats/commands", icon: Bot, desc: "Bot commands" },
+const webProperties = [
+  {
+    id: '1',
+    title: 'Splash Page',
+    description: 'My splash page',
+    url: 'https://msha.ke/benjaminjobprojects',
+    icon: 'star',
+    color: 'bg-orange-500',
+    workInProgress: true,
+  },
+  {
+    id: '2',
+    title: 'My Webpage',
+    description: "View my projects and portfolio",
+    url: 'https://benjaminjob.wixsite.com/projects',
+    icon: 'globe',
+    color: 'bg-blue-500',
+    workInProgress: true,
+  },
+  {
+    id: '3',
+    title: 'Software Releases',
+    description: 'Track software releases',
+    url: 'https://software.benjob.me',
+    icon: 'code',
+    color: 'bg-green-500',
+    workInProgress: false,
+  },
+  {
+    id: '4',
+    title: 'Tech Events',
+    description: 'Stay updated with tech events',
+    url: 'https://events.benjob.me',
+    icon: 'calendar',
+    color: 'bg-purple-500',
+    workInProgress: false,
+  },
 ];
 
-function Globe({ className }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <circle cx="12" cy="12" r="10" />
-      <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-    </svg>
-  );
+const shortcuts = [
+  {
+    id: 's1',
+    title: 'AirFry Convert',
+    description: 'Convert (fan) oven temps & times to air fryer',
+    url: 'https://www.icloud.com/shortcuts/f021041cfa3040af8c6bc9f6fc3dd808',
+    icon: 'thermometer',
+    color: 'bg-red-500',
+  },
+];
+
+const myProjects = [
+  {
+    id: 'mp1',
+    title: 'My Projects Page',
+    description: 'View all my project showcases',
+    url: 'https://www.facebook.com/share/19w5dY7Mbz/',
+    icon: 'briefcase',
+    color: 'bg-indigo-600',
+  },
+];
+
+const techSections = [
+  {
+    id: 'ts1',
+    title: "Ben's Tech/AI & Memes",
+    description: 'Exclusive XR/VR, games, TV & more - From BXR',
+    url: 'https://fb.me/g/5hB6pZGyQ/R49fjzos',
+    icon: 'gamecontroller',
+    color: 'bg-blue-500',
+  },
+  {
+    id: 'ts2',
+    title: "Ben's Cutting Edge Tech/AI",
+    description: 'XR (VR/AR/MR) and even more - BXR',
+    url: 'https://www.facebook.com/share/g/19TuLjHCXj/',
+    icon: 'settings',
+    color: 'bg-purple-500',
+  },
+];
+
+const socialLinks = [
+  {
+    id: 'li',
+    title: 'LinkedIn',
+    url: 'https://www.linkedin.com/in/benjaminjob',
+    icon: 'linkedin',
+    color: 'bg-blue-700',
+  },
+  {
+    id: 'lt',
+    title: 'All Links (LinkTree)',
+    url: 'https://linktr.ee/benjaminjob',
+    icon: 'link',
+    color: 'bg-green-500',
+  },
+];
+
+function getIcon(name: string) {
+  switch(name) {
+    case 'star': return <span>⭐</span>;
+    case 'globe': return <Globe />;
+    case 'code': return <CodeSlash />;
+    case 'calendar': return <Calendar />;
+    case 'briefcase': return <Briefcase />;
+    case 'gamecontroller': return <GameController />;
+    case 'settings': return <Settings />;
+    case 'thermometer': return <Thermometer />;
+    case 'link': return <Link />;
+    default: return <Globe />;
+  }
 }
 
-function TimeWidget() {
-  const [time, setTime] = useState({ time: "", date: "" });
-
-  useEffect(() => {
-    const updateTime = () => {
-      const now = new Date();
-      setTime({
-        time: now.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit", second: "2-digit" }),
-        date: now.toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long", year: "numeric" }),
-      });
-    };
-    updateTime();
-    const interval = setInterval(updateTime, 1000);
-    return () => clearInterval(interval);
-  }, []);
-
+function LinkCard({ item }: { item: any }) {
   return (
-    <div className="bg-card rounded-xl p-6 border border-border card-hover glow">
-      <div className="flex items-center gap-3 mb-2">
-        <Clock className="w-5 h-5 text-primary" />
-        <span className="text-muted-foreground text-sm">Current Time</span>
+    <motion.a
+      href={item.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
+      className={`${item.color} rounded-xl p-4 text-white flex items-center gap-4 cursor-pointer`}
+    >
+      <div className="w-10 h-10 rounded-lg bg-white/20 flex items-center justify-center">
+        {getIcon(item.icon)}
       </div>
-      <div className="text-4xl font-bold font-mono tracking-wider">{time.time}</div>
-      <div className="text-muted-foreground mt-1">{time.date}</div>
-    </div>
-  );
-}
-
-function WeatherWidget() {
-  const [weather, setWeather] = useState<{ temp: number; condition: string; location: string } | null>(null);
-
-  useEffect(() => {
-    // Mock weather data - in production, fetch from weather API
-    setWeather({
-      temp: 12,
-      condition: "Partly Cloudy",
-      location: "Paris, France",
-    });
-  }, []);
-
-  if (!weather) return null;
-
-  return (
-    <div className="bg-card rounded-xl p-6 border border-border card-hover glow-green">
-      <div className="flex items-center gap-3 mb-2">
-        <Cloud className="w-5 h-5 text-accent" />
-        <span className="text-muted-foreground text-sm">Weather</span>
+      <div className="flex-1">
+        <h3 className="font-semibold">{item.title}</h3>
+        <p className="text-white/80 text-sm">{item.description}</p>
       </div>
-      <div className="text-4xl font-bold">{weather.temp}°C</div>
-      <div className="text-muted-foreground">{weather.condition}</div>
-      <div className="flex items-center gap-1 text-xs text-muted-foreground mt-2">
-        <MapPin className="w-3 h-3" />
-        {weather.location}
-      </div>
-    </div>
-  );
-}
-
-function SystemStatus() {
-  const [status, setStatus] = useState<{ openclaw: string; backup: string } | null>(null);
-
-  useEffect(() => {
-    // Mock status - in production, fetch from API
-    setStatus({
-      openclaw: "online",
-      backup: "OK",
-    });
-  }, []);
-
-  return (
-    <div className="bg-card rounded-xl p-6 border border-border card-hover">
-      <div className="flex items-center gap-3 mb-4">
-        <Server className="w-5 h-5 text-primary" />
-        <span className="font-semibold">System Status</span>
-      </div>
-      <div className="space-y-3">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Bot className="w-4 h-4 text-muted-foreground" />
-            <span className="text-sm">OpenClaw</span>
-          </div>
-          <span className="text-accent text-sm flex items-center gap-1">
-            <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-            Online
-          </span>
-        </div>
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <HardDrive className="w-4 h-4 text-muted-foreground" />
-            <span className="text-sm">Backup</span>
-          </div>
-          <span className="text-accent text-sm flex items-center gap-1">
-            <span className="w-2 h-2 bg-accent rounded-full" />
-            OK
-          </span>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function QuickLinks() {
-  return (
-    <div className="bg-card rounded-xl p-6 border border-border card-hover">
-      <div className="flex items-center gap-3 mb-4">
-        <Link2 className="w-5 h-5 text-primary" />
-        <span className="font-semibold">Quick Links</span>
-      </div>
-      <div className="grid grid-cols-2 gap-3">
-        {links.map((link, i) => (
-          <motion.a
-            key={link.name}
-            href={link.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: i * 0.1 }}
-            className="flex items-center gap-2 p-3 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors group"
-          >
-            <link.icon className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium">{link.name}</span>
-            <ExternalLink className="w-3 h-3 ml-auto text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
-          </motion.a>
-        ))}
-      </div>
-    </div>
+      <ExternalLink className="w-5 h-5 opacity-60" />
+    </motion.a>
   );
 }
 
 export default function Home() {
+  const [showWorkInProgress, setShowWorkInProgress] = useState(false);
+  const [showLinkedIn, setShowLinkedIn] = useState(true);
+
+  const projectItems = webProperties.filter(item => item.workInProgress);
+  const appItems = webProperties.filter(item => !item.workInProgress);
+
   return (
-    <main className="min-h-screen p-6 md:p-12">
-      <div className="max-w-6xl mx-auto">
+    <main className="min-h-screen bg-gray-50 p-6">
+      <div className="max-w-md mx-auto">
         {/* Header */}
-        <motion.div
+        <motion.div 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mb-8"
+          className="mb-6"
         >
-          <h1 className="text-4xl font-bold mb-2">Ben&apos;s Hub</h1>
-          <p className="text-muted-foreground">Personal dashboard & command center</p>
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">Ben's Hub</h1>
+          <p className="text-gray-600">Choose what you'd like to view</p>
         </motion.div>
 
-        {/* Main Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {/* Time Widget */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-          >
-            <TimeWidget />
-          </motion.div>
-
-          {/* Weather Widget */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-          >
-            <WeatherWidget />
-          </motion.div>
-
-          {/* System Status */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="lg:col-span-2"
-          >
-            <SystemStatus />
-          </motion.div>
-
-          {/* Quick Links */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="lg:col-span-2"
-          >
-            <QuickLinks />
-          </motion.div>
-
-          {/* Quick Actions - Placeholder */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-            className="lg:col-span-2"
-          >
-            <div className="bg-card rounded-xl p-6 border border-border card-hover">
-              <div className="flex items-center gap-3 mb-4">
-                <Zap className="w-5 h-5 text-primary" />
-                <span className="font-semibold">Quick Actions</span>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                <button className="px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm hover:bg-primary/90 transition-colors">
-                  Run Backup
-                </button>
-                <button className="px-4 py-2 bg-secondary text-secondary-foreground rounded-lg text-sm hover:bg-secondary/80 transition-colors">
-                  Restart Gateway
-                </button>
-                <button className="px-4 py-2 bg-secondary text-secondary-foreground rounded-lg text-sm hover:bg-secondary/80 transition-colors">
-                  View Logs
-                </button>
-              </div>
-            </div>
-          </motion.div>
+        {/* Social Links */}
+        <div className="mb-6 space-y-3">
+          {socialLinks.map((item, i) => (
+            <LinkCard key={item.id} item={item} />
+          ))}
         </div>
 
-        {/* Footer */}
-        <motion.footer
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.6 }}
-          className="mt-12 text-center text-muted-foreground text-sm"
+        {/* Work in Progress Toggle */}
+        <button 
+          onClick={() => setShowWorkInProgress(!showWorkInProgress)}
+          className="w-full mb-4 flex items-center justify-between p-3 bg-amber-100 rounded-lg text-amber-800"
         >
-          <p>Last updated: {new Date().toLocaleString("en-GB")}</p>
-        </motion.footer>
+          <span>Show work in progress</span>
+          <span className="text-xl">{showWorkInProgress ? '👁️' : '👁️‍🗨️'}</span>
+        </button>
+
+        {/* Apps Section */}
+        <div className="mb-6">
+          <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Apps</h2>
+          <div className="space-y-3">
+            {appItems.map((item, i) => (
+              <LinkCard key={item.id} item={item} />
+            ))}
+          </div>
+        </div>
+
+        {/* My Projects */}
+        <div className="mb-6">
+          <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">My Projects</h2>
+          <div className="space-y-3">
+            {myProjects.map((item, i) => (
+              <LinkCard key={item.id} item={item} />
+            ))}
+          </div>
+        </div>
+
+        {/* Tech */}
+        <div className="mb-6">
+          <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Tech</h2>
+          <div className="space-y-3">
+            {techSections.map((item, i) => (
+              <LinkCard key={item.id} item={item} />
+            ))}
+          </div>
+        </div>
+
+        {/* Shortcuts */}
+        {shortcuts.length > 0 && (
+          <div className="mb-6">
+            <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Shortcuts</h2>
+            <div className="space-y-3">
+              {shortcuts.map((item, i) => (
+                <LinkCard key={item.id} item={item} />
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </main>
   );
