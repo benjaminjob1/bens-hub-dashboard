@@ -23,7 +23,7 @@ interface LayoutProps {
 // Ben's profile info
 const PROFILE = {
   name: "Benjamin Job",
-  location: "Maville, France",
+  location: "Marseille, France",
   email: "Benjamin.job@gwern.co.uk",
   botEmail: "bensbot@agentmail.to",
   gravatarUrl: "https://www.gravatar.com/avatar/46e5d1ddbdadfadf700f0c15bf6591e3?default=mp&s=200",
