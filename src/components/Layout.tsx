@@ -55,23 +55,23 @@ export default function Layout({ children, title, subtitle }: LayoutProps) {
         
         {/* Glass header */}
         <header className={`sticky top-0 z-50 ${isDark ? "bg-gray-900/70 border-gray-800" : "bg-white/70 border-gray-200"} backdrop-blur-xl border-b`}>
-          <div className="max-w-5xl mx-auto px-6 py-4">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
             {/* Top row: Title + Profile + Theme */}
-            <div className="flex items-center justify-between gap-4">
+            <div className="flex items-center justify-between gap-2 sm:gap-4">
               {/* Left: Title */}
               <div className="flex-1 min-w-0">
-                <h1 className={`text-xl font-bold truncate ${isDark ? "text-white" : "text-gray-900"}`}>{title}</h1>
-                <p className={`text-sm truncate ${isDark ? "text-gray-400" : "text-gray-500"}`}>{subtitle}</p>
+                <h1 className={`text-lg sm:text-xl font-bold truncate ${isDark ? "text-white" : "text-gray-900"}`}>{title}</h1>
+                <p className={`text-xs sm:text-sm truncate ${isDark ? "text-gray-400" : "text-gray-500"}`}>{subtitle}</p>
               </div>
 
               {/* Right: Profile + Theme */}
-              <div className="flex items-center gap-3 flex-shrink-0">
+              <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
                 <img 
                   src={PROFILE.gravatarUrl} 
                   alt={PROFILE.name}
-                  className="w-10 h-10 rounded-full border-2 border-gray-500"
+                  className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-gray-500"
                 />
-                <div className={`${isDark ? "text-gray-300" : "text-gray-700"}`}>
+                <div className={`hidden sm:block ${isDark ? "text-gray-300" : "text-gray-700"}`}>
                   <p className="text-sm font-semibold">{PROFILE.name}</p>
                   <div className="flex items-center gap-1 text-xs text-muted-foreground">
                     <MapPin size={10} />
@@ -80,14 +80,14 @@ export default function Layout({ children, title, subtitle }: LayoutProps) {
                 </div>
                 <button
                   onClick={toggle}
-                  className={`p-2.5 rounded-xl transition-all duration-300 ${
+                  className={`p-2 rounded-xl transition-all duration-300 ${
                     isDark 
                       ? "bg-gray-800/60 hover:bg-gray-700/80 text-yellow-400 border border-gray-700/50" 
                       : "bg-white/60 hover:bg-white/90 text-indigo-600 border border-gray-200/50"
                   } backdrop-blur-md shadow-lg`}
                   aria-label="Toggle theme"
                 >
-                  {isDark ? <Moon size={18} /> : <Sun size={18} />}
+                  {isDark ? <Moon size={16} /> : <Sun size={16} />}
                 </button>
               </div>
             </div>
