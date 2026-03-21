@@ -328,6 +328,30 @@ export default function Home() {
           <LinkCard key={item.id} item={item} />
         ))}
       </GlassCard>
+
+      {/* GitHub */}
+      <GlassCard title="GitHub">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <a
+            href="https://github.com/benjaminjob1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors"
+          >
+            <span className="text-2xl">👤</span>
+            <span className="text-sm font-medium">Ben's GitHub</span>
+          </a>
+          <a
+            href="https://github.com/openclaw"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors"
+          >
+            <span className="text-2xl">🤖</span>
+            <span className="text-sm font-medium">OpenClaw GitHub</span>
+          </a>
+        </div>
+      </GlassCard>
     </Layout>
   );
 }
