@@ -15,6 +15,14 @@ const apps = [
     color: 'bg-gradient-to-br from-green-400 to-green-600',
   },
   {
+    id: '1b',
+    title: 'Hardware Releases',
+    description: 'Track hardware releases',
+    url: 'https://hardware.benjob.me',
+    icon: '🖥️',
+    color: 'bg-gradient-to-br from-cyan-400 to-cyan-600',
+  },
+  {
     id: '2',
     title: 'Tech Events',
     description: 'Stay updated with tech events',
