@@ -7,6 +7,14 @@ import { useTheme } from "../components/Layout";
 
 const apps = [
   {
+    id: 'fb',
+    title: 'Feedback Portal',
+    description: 'Submit & view feedback on projects',
+    url: 'https://feedback.benjob.me',
+    icon: '💬',
+    color: 'bg-gradient-to-br from-yellow-400 to-orange-500',
+  },
+  {
     id: '1',
     title: 'Software Releases',
     description: 'Track software releases',
@@ -51,11 +59,19 @@ const workInProgress = [
   },
   {
     id: 'w2',
-    title: 'My Webpage',
-    description: "View my projects and portfolio",
+    title: 'Previous Website',
+    description: "View my old projects and portfolio",
     url: 'https://benjaminjob.wixsite.com/projects',
     icon: '🌐',
     color: 'bg-gradient-to-br from-blue-400 to-blue-600',
+  },
+  {
+    id: 'w3',
+    title: 'Model Railway Site',
+    description: 'In development',
+    url: 'https://railway.benjob.me',
+    icon: '🚂',
+    color: 'bg-gradient-to-br from-red-400 to-red-700',
   },
 ];
 
