@@ -5,6 +5,25 @@ import { motion } from "framer-motion";
 import Layout from "../components/Layout";
 import { useTheme } from "../components/Layout";
 
+const recent = [
+  {
+    id: 'fb',
+    title: 'Feedback Portal',
+    description: 'Submit & view feedback on projects',
+    url: 'https://feedback.benjob.me',
+    icon: '💬',
+    color: 'bg-gradient-to-br from-yellow-400 to-orange-500',
+  },
+  {
+    id: 'ns',
+    title: 'My Website',
+    description: 'My portfolio & projects',
+    url: 'https://benjob.me',
+    icon: '🌐',
+    color: 'bg-gradient-to-br from-blue-400 to-indigo-600',
+  },
+];
+
 const apps = [
   {
     id: 'fb',
@@ -326,9 +345,9 @@ export default function Home() {
         </motion.div>
       )}
 
-      {/* Apps Section */}
-      <GlassCard title="Dashboards">
-        {apps.map((item) => (
+      {/* Recent Section */}
+      <GlassCard title="Recent">
+        {recent.map((item) => (
           <LinkCard key={item.id} item={item} />
         ))}
       </GlassCard>
