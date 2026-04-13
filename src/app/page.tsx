@@ -68,7 +68,7 @@ const workInProgress = [
   {
     id: 'w3',
     title: 'Model Railway Site',
-    description: 'In development',
+    description: 'In development (railway.benjob.me)',
     url: 'https://railway.benjob.me',
     icon: '🚂',
     color: 'bg-gradient-to-br from-red-400 to-red-700',
