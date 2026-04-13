@@ -15,6 +15,14 @@ const apps = [
     color: 'bg-gradient-to-br from-yellow-400 to-orange-500',
   },
   {
+    id: 'ns',
+    title: 'My Website',
+    description: 'My portfolio & projects',
+    url: 'https://benjob.me',
+    icon: '🌐',
+    color: 'bg-gradient-to-br from-blue-400 to-indigo-600',
+  },
+  {
     id: '1',
     title: 'Software Releases',
     description: 'Track software releases',
@@ -56,14 +64,6 @@ const workInProgress = [
     url: 'https://msha.ke/benjaminjobprojects',
     icon: '✨',
     color: 'bg-gradient-to-br from-orange-400 to-orange-600',
-  },
-  {
-    id: 'w2',
-    title: 'Previous Website',
-    description: "View my old projects and portfolio",
-    url: 'https://benjaminjob.wixsite.com/projects',
-    icon: '🌐',
-    color: 'bg-gradient-to-br from-blue-400 to-blue-600',
   },
   {
     id: 'w3',
