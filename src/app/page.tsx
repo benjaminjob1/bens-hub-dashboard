@@ -303,6 +303,7 @@ function GlassCard({ title, children }: { title: string; children: React.ReactNo
 
 export default function Home() {
   const [showWorkInProgress, setShowWorkInProgress] = useState(false);
+  const [showShortcuts, setShowShortcuts] = useState(false);
   const { isDark } = useTheme();
 
   return (
@@ -367,11 +368,25 @@ export default function Home() {
       </GlassCard>
 
       {/* Shortcuts */}
-      <GlassCard title="Shortcuts">
-        {shortcuts.map((item) => (
-          <LinkCard key={item.id} item={item} />
-        ))}
-      </GlassCard>
+      <div
+        onClick={() => setShowShortcuts(!showShortcuts)}
+        className={`flex items-center gap-2 cursor-pointer text-sm font-semibold px-4 pt-4 -mb-2 ${
+          showShortcuts ? "text-blue-600" : "text-gray-500 hover:text-gray-700"
+        }`}
+      >
+        <span>⚡</span>
+        <span className="font-medium">Shortcuts</span>
+        <span className="ml-auto text-xs">
+          {showShortcuts ? "▲" : "▶"}
+        </span>
+      </div>
+      {showShortcuts && (
+        <GlassCard>
+          {shortcuts.map((item) => (
+            <LinkCard key={item.id} item={item} />
+          ))}
+        </GlassCard>
+      )}
 
       {/* Community */}
       <GlassCard title="Community">
