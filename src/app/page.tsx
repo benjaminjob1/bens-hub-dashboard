@@ -66,6 +66,14 @@ const workInProgress = [
     color: 'bg-gradient-to-br from-orange-400 to-orange-600',
   },
   {
+    id: 'w2',
+    title: 'Previous Website',
+    description: 'Deprecated — old portfolio site',
+    url: 'https://benjaminjob.wixsite.com/projects',
+    icon: '🌐',
+    color: 'bg-gradient-to-br from-gray-400 to-gray-600',
+  },
+  {
     id: 'w3',
     title: 'Model Railway Site',
     description: 'In development (railway.benjob.me)',
