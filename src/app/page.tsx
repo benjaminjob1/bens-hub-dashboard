@@ -395,8 +395,7 @@ export default function Home() {
         ))}
       </GlassCard>
 
-      {/* Dashboards */}
-      <GlassCard title="📊 My Dashboards">
+      <GlassCard title="📊 Dashboards">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <a href="https://stocks.benjob.me" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors">
             <span className="text-2xl">📈</span>
@@ -424,6 +423,13 @@ export default function Home() {
             <div>
               <div className="text-sm font-medium">Tech Events</div>
               <div className="text-xs text-gray-400">events.benjob.me</div>
+            </div>
+          </a>
+          <a href="https://benjob.me/stats" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors">
+            <span className="text-2xl">📊</span>
+            <div>
+              <div className="text-sm font-medium">Stats Dashboard</div>
+              <div className="text-xs text-gray-400">benjob.me/stats</div>
             </div>
           </a>
         </div>
