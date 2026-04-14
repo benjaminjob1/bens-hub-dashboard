@@ -243,41 +243,6 @@ const community = [
 ];
 
 const dashboards = [
-  {
-    id: 'ds1',
-    title: 'Stats Dashboard',
-    description: 'System stats, versions, commands — main/production',
-    url: 'https://benjob.me/stats',
-    icon: '📊',
-    color: 'bg-gradient-to-br from-emerald-500 to-teal-600',
-    tag: 'main',
-  },
-  {
-    id: 'ds2',
-    title: 'Stats Preview',
-    description: 'Preview version of stats dashboard',
-    url: 'https://benjob.me/stats-preview',
-    icon: '🔍',
-    color: 'bg-gradient-to-br from-cyan-500 to-blue-600',
-    tag: 'preview',
-  },
-  {
-    id: 'ds3',
-    title: 'Commands',
-    description: 'All available slash commands — main',
-    url: 'https://benjob.me/stats/commands',
-    icon: '⌨️',
-    color: 'bg-gradient-to-br from-orange-500 to-red-600',
-  },
-  {
-    id: 'ds4',
-    title: 'Commands Preview',
-    description: 'All available slash commands — preview',
-    url: 'https://benjob.me/stats-preview/commands',
-    icon: '🔧',
-    color: 'bg-gradient-to-br from-yellow-500 to-orange-600',
-  },
-];
 
 const socialLinks = [
   {
