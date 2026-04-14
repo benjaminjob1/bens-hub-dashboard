@@ -242,8 +242,6 @@ const community = [
   },
 ];
 
-const dashboards = [
-
 const socialLinks = [
   {
     id: 'li',
