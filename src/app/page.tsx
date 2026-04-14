@@ -242,6 +242,43 @@ const community = [
   },
 ];
 
+const dashboards = [
+  {
+    id: 'ds1',
+    title: 'Stats Dashboard',
+    description: 'System stats, versions, commands — main/production',
+    url: 'https://benjob.me/stats',
+    icon: '📊',
+    color: 'bg-gradient-to-br from-emerald-500 to-teal-600',
+    tag: 'main',
+  },
+  {
+    id: 'ds2',
+    title: 'Stats Preview',
+    description: 'Preview version of stats dashboard',
+    url: 'https://benjob.me/stats-preview',
+    icon: '🔍',
+    color: 'bg-gradient-to-br from-cyan-500 to-blue-600',
+    tag: 'preview',
+  },
+  {
+    id: 'ds3',
+    title: 'Commands',
+    description: 'All available slash commands — main',
+    url: 'https://benjob.me/stats/commands',
+    icon: '⌨️',
+    color: 'bg-gradient-to-br from-orange-500 to-red-600',
+  },
+  {
+    id: 'ds4',
+    title: 'Commands Preview',
+    description: 'All available slash commands — preview',
+    url: 'https://benjob.me/stats-preview/commands',
+    icon: '🔧',
+    color: 'bg-gradient-to-br from-yellow-500 to-orange-600',
+  },
+];
+
 const socialLinks = [
   {
     id: 'li',
@@ -393,6 +430,40 @@ export default function Home() {
         {community.map((item) => (
           <LinkCard key={item.id} item={item} />
         ))}
+      </GlassCard>
+
+      {/* Dashboards */}
+      <GlassCard title="📊 Dashboards">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <a href="https://benjob.me/stats" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors">
+            <span className="text-2xl">📊</span>
+            <div>
+              <div className="text-sm font-medium">Stats — Main</div>
+              <div className="text-xs text-gray-400">benjob.me/stats</div>
+            </div>
+          </a>
+          <a href="https://benjob.me/stats-preview" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors">
+            <span className="text-2xl">🔍</span>
+            <div>
+              <div className="text-sm font-medium">Stats — Preview</div>
+              <div className="text-xs text-gray-400">benjob.me/stats-preview</div>
+            </div>
+          </a>
+          <a href="https://benjob.me/stats/commands" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors">
+            <span className="text-2xl">⌨️</span>
+            <div>
+              <div className="text-sm font-medium">Commands — Main</div>
+              <div className="text-xs text-gray-400">benjob.me/stats/commands</div>
+            </div>
+          </a>
+          <a href="https://benjob.me/stats-preview/commands" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors">
+            <span className="text-2xl">🔧</span>
+            <div>
+              <div className="text-sm font-medium">Commands — Preview</div>
+              <div className="text-xs text-gray-400">benjob.me/stats-preview/commands</div>
+            </div>
+          </a>
+        </div>
       </GlassCard>
 
       {/* GitHub */}
