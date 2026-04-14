@@ -286,7 +286,7 @@ function LinkCard({ item }: { item: any }) {
   );
 }
 
-function GlassCard({ title, children }: { title: string; children: React.ReactNode }) {
+function GlassCard({ title, children }: { title?: string; children: React.ReactNode }) {
   const { isDark } = useTheme();
   
   return (
