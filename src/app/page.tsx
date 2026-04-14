@@ -433,34 +433,34 @@ export default function Home() {
       </GlassCard>
 
       {/* Dashboards */}
-      <GlassCard title="📊 Dashboards">
+      <GlassCard title="📊 My Dashboards">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <a href="https://benjob.me/stats" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors">
-            <span className="text-2xl">📊</span>
+          <a href="https://techpulse.benjob.me" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors">
+            <span className="text-2xl">📈</span>
             <div>
-              <div className="text-sm font-medium">Stats — Main</div>
-              <div className="text-xs text-gray-400">benjob.me/stats</div>
+              <div className="text-sm font-medium">TechPulse Stocks</div>
+              <div className="text-xs text-gray-400">techpulse.benjob.me</div>
             </div>
           </a>
-          <a href="https://benjob.me/stats-preview" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors">
-            <span className="text-2xl">🔍</span>
+          <a href="https://software.benjob.me" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors">
+            <span className="text-2xl">📦</span>
             <div>
-              <div className="text-sm font-medium">Stats — Preview</div>
-              <div className="text-xs text-gray-400">benjob.me/stats-preview</div>
+              <div className="text-sm font-medium">Software Releases</div>
+              <div className="text-xs text-gray-400">software.benjob.me</div>
             </div>
           </a>
-          <a href="https://benjob.me/stats/commands" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors">
-            <span className="text-2xl">⌨️</span>
+          <a href="https://hardware.benjob.me" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors">
+            <span className="text-2xl">💻</span>
             <div>
-              <div className="text-sm font-medium">Commands — Main</div>
-              <div className="text-xs text-gray-400">benjob.me/stats/commands</div>
+              <div className="text-sm font-medium">Hardware Releases</div>
+              <div className="text-xs text-gray-400">hardware.benjob.me</div>
             </div>
           </a>
-          <a href="https://benjob.me/stats-preview/commands" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors">
-            <span className="text-2xl">🔧</span>
+          <a href="https://events.benjob.me" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors">
+            <span className="text-2xl">📅</span>
             <div>
-              <div className="text-sm font-medium">Commands — Preview</div>
-              <div className="text-xs text-gray-400">benjob.me/stats-preview/commands</div>
+              <div className="text-sm font-medium">Tech Events</div>
+              <div className="text-xs text-gray-400">events.benjob.me</div>
             </div>
           </a>
         </div>
