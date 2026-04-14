@@ -398,11 +398,11 @@ export default function Home() {
       {/* Dashboards */}
       <GlassCard title="📊 My Dashboards">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <a href="https://techpulse.benjob.me" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors">
+          <a href="https://stocks.benjob.me" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors">
             <span className="text-2xl">📈</span>
             <div>
-              <div className="text-sm font-medium">TechPulse Stocks</div>
-              <div className="text-xs text-gray-400">techpulse.benjob.me</div>
+              <div className="text-sm font-medium">Stocks</div>
+              <div className="text-xs text-gray-400">stocks.benjob.me</div>
             </div>
           </a>
           <a href="https://software.benjob.me" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors">
