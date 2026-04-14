@@ -13,6 +13,7 @@ const recent = [
     url: 'https://feedback.benjob.me',
     icon: '💬',
     color: 'bg-gradient-to-br from-yellow-400 to-orange-500',
+    tags: ['feedback', 'site', 'benjob', 'portal', 'input', 'comments', 'reviews', 'projects', 'suggestions', 'bugs', 'requests', 'user testing', 'opinion', 'interaction', 'form', 'contact', 'community feedback', 'project manager']
   },
   {
     id: 'ns',
@@ -21,25 +22,28 @@ const recent = [
     url: 'https://benjob.me',
     icon: '🌐',
     color: 'bg-gradient-to-br from-blue-400 to-indigo-600',
+    tags: ['portfolio', 'website', 'projects', 'personal', 'cv', 'resume', 'showcase', 'main', 'home', 'about me', 'biography', 'skills', 'experience', 'web developer', 'designer', 'work', 'identity', 'landing page', 'profile']
   },
 ];
 
 const apps = [
   {
-    id: 'fb',
+    id: 'fb-main',
     title: 'Feedback Portal',
     description: 'Submit & view feedback on projects',
     url: 'https://feedback.benjob.me',
     icon: '💬',
     color: 'bg-gradient-to-br from-yellow-400 to-orange-500',
+    tags: ['feedback', 'site', 'benjob', 'portal', 'input', 'comments', 'reviews', 'projects', 'suggestions', 'bugs', 'requests', 'user testing', 'opinion', 'interaction', 'form', 'contact', 'community feedback', 'project manager']
   },
   {
-    id: 'ns',
+    id: 'ns-main',
     title: 'My Website',
     description: 'My portfolio & projects',
     url: 'https://benjob.me',
     icon: '🌐',
     color: 'bg-gradient-to-br from-blue-400 to-indigo-600',
+    tags: ['portfolio', 'website', 'projects', 'personal', 'cv', 'resume', 'showcase', 'main', 'home', 'about me', 'biography', 'skills', 'experience', 'web developer', 'designer', 'work', 'identity', 'landing page', 'profile']
   },
   {
     id: '1',
@@ -48,6 +52,7 @@ const apps = [
     url: 'https://software.benjob.me',
     icon: '💻',
     color: 'bg-gradient-to-br from-green-400 to-green-600',
+    tags: ['software', 'releases', 'updates', 'tech', 'apps', 'versions', 'changelog', 'tracking', 'new software', 'ios updates', 'android updates', 'windows', 'macos', 'application', 'builds', 'beta', 'stable', 'release notes']
   },
   {
     id: '1b',
@@ -56,6 +61,7 @@ const apps = [
     url: 'https://hardware.benjob.me',
     icon: '🖥️',
     color: 'bg-gradient-to-br from-cyan-400 to-cyan-600',
+    tags: ['hardware', 'releases', 'spec', 'tech', 'phones', 'tablets', 'devices', 'tracking', 'gadgets', 'specs', 'smartphones', 'laptops', 'cpus', 'gpus', 'peripherals', 'mobile', 'hardware monitoring', 'tech specs', 'new devices', 'electronics']
   },
   {
     id: '2',
@@ -64,6 +70,7 @@ const apps = [
     url: 'https://events.benjob.me',
     icon: '📅',
     color: 'bg-gradient-to-br from-purple-400 to-purple-600',
+    tags: ['events', 'tech', 'conferences', 'calendar', 'keynotes', 'shows', 'expos', 'schedule', 'summits', 'workshops', 'meetups', 'ces', 'mwc', 'wwdc', 'google io', 'apple event', 'launch', 'presentation', 'tech industry']
   },
   {
     id: '3',
@@ -72,6 +79,7 @@ const apps = [
     url: 'https://stocks.benjob.me',
     icon: '📈',
     color: 'bg-gradient-to-br from-emerald-400 to-emerald-600',
+    tags: ['stocks', 'finance', 'market', 'tech', 'money', 'investing', 'shares', 'nasdaq', 'charts', 'trading', 'portfolio', 'stock market', 'finance news', 'wealth', 'savings', 'dividends', 'equities', 'tickers', 'valuation']
   },
 ];
 
@@ -83,6 +91,7 @@ const workInProgress = [
     url: 'https://msha.ke/benjaminjobprojects',
     icon: '✨',
     color: 'bg-gradient-to-br from-orange-400 to-orange-600',
+    tags: ['splash', 'links', 'social', 'milkshake', 'bio', 'landing', 'introduction', 'welcome', 'portal', 'link in bio', 'social media', 'contact links', 'identity', 'quick links']
   },
   {
     id: 'w2',
@@ -91,6 +100,7 @@ const workInProgress = [
     url: 'https://benjaminjob.wixsite.com/projects',
     icon: '🌐',
     color: 'bg-gradient-to-br from-gray-400 to-gray-600',
+    tags: ['old', 'legacy', 'website', 'portfolio', 'wix', 'archive', 'history', 'former', 'outdated', 'classic', 'web design history', 'backup', 'projects archive']
   },
   {
     id: 'w3',
@@ -99,6 +109,7 @@ const workInProgress = [
     url: 'https://railway.benjob.me',
     icon: '🚂',
     color: 'bg-gradient-to-br from-red-400 to-red-700',
+    tags: ['railway', 'model', 'hobby', 'development', 'trains', '3d', 'tracks', 'layout', 'modeling', 'locomotive', 'railroad', 'scenery', 'engineering', 'miniature', 'build', 'railway enthusiast']
   },
 ];
 
@@ -110,6 +121,7 @@ const myProjects = [
     url: 'https://www.facebook.com/share/19w5dY7Mbz/',
     icon: '💼',
     color: 'bg-gradient-to-br from-indigo-500 to-indigo-700',
+    tags: ['projects', 'facebook', 'showcase', 'work', 'gallery', 'photos', 'videos', 'creation', 'invention', 'engineering', 'hobbyist', 'maker', 'portfolio', 'social showcase', 'achievements']
   },
 ];
 
@@ -121,6 +133,7 @@ const techSections = [
     url: 'https://fb.me/g/5hB6pZGyQ/R49fjzos',
     icon: '🎮',
     color: 'bg-gradient-to-br from-blue-400 to-purple-600',
+    tags: ['tech', 'ai', 'memes', 'vr', 'xr', 'facebook', 'gaming', 'funny', 'entertainment', 'group', 'humor', 'artificial intelligence', 'virtual reality', 'extended reality', 'community', 'discussion']
   },
   {
     id: 'ts2',
@@ -129,6 +142,7 @@ const techSections = [
     url: 'https://www.facebook.com/share/g/19TuLjHCXj/',
     icon: '⚙️',
     color: 'bg-gradient-to-br from-purple-400 to-pink-600',
+    tags: ['tech', 'ai', 'xr', 'vr', 'facebook', 'mixed reality', 'ar', 'metaverse', 'innovation', 'group', 'future tech', 'augmented reality', 'cutting edge', 'technology', 'advanced ai', 'high tech']
   },
 ];
 
@@ -140,6 +154,7 @@ const shortcuts = [
     url: 'https://www.icloud.com/shortcuts/f021041cfa3040af8c6bc9f6fc3dd808',
     icon: '🌡️',
     color: 'bg-gradient-to-br from-red-400 to-red-600',
+    tags: ['shortcuts', 'apple', 'airfryer', 'cooking', 'timer', 'conversion', 'kitchen', 'food', 'culinary', 'automation', 'ios shortcut', 'temp convert', 'recipe helper', 'fryer', 'home assistant']
   },
   {
     id: 'r1',
@@ -148,6 +163,7 @@ const shortcuts = [
     url: 'https://routinehub.co',
     icon: '⚡',
     color: 'bg-gradient-to-br from-blue-400 to-indigo-600',
+    tags: ['shortcuts', 'apple', 'community', 'ios', 'automation', 'scripts', 'download', 'repository', 'workflow', 'sharing', 'ios power user', 'productivity', 'tools', 'shortcut store']
   },
   {
     id: 'r2',
@@ -156,6 +172,7 @@ const shortcuts = [
     url: 'https://shortcutsgallery.com',
     icon: '🍎',
     color: 'bg-gradient-to-br from-gray-400 to-gray-600',
+    tags: ['shortcuts', 'apple', 'gallery', 'ios', 'official', 'library', 'automation', 'workflow', 'curated', 'apple tools', 'productivity', 'iphone', 'ipad', 'macos shortcuts']
   },
   {
     id: 'r3',
@@ -164,6 +181,7 @@ const shortcuts = [
     url: 'https://shareshortcuts.com',
     icon: '📤',
     color: 'bg-gradient-to-br from-green-400 to-teal-600',
+    tags: ['shortcuts', 'apple', 'share', 'ios', 'community', 'upload', 'distribution', 'automation', 'tools', 'scripts', 'user shortcuts', 'collaboration']
   },
   {
     id: 'r4',
@@ -172,6 +190,7 @@ const shortcuts = [
     url: 'https://www.macstories.net/shortcuts',
     icon: '📖',
     color: 'bg-gradient-to-br from-purple-400 to-pink-600',
+    tags: ['shortcuts', 'apple', 'guides', 'ios', 'macstories', 'federico viticci', 'expert', 'automation', 'power user', 'tutorials', 'in-depth', 'advanced shortcuts', 'blog', 'tech news']
   },
   {
     id: 'a1',
@@ -180,6 +199,7 @@ const shortcuts = [
     url: 'https://apps.apple.com',
     icon: '🛍️',
     color: 'bg-gradient-to-br from-blue-500 to-cyan-500',
+    tags: ['apps', 'apple', 'store', 'ios', 'macos', 'download', 'software', 'application', 'mobile apps', 'marketplace', 'games', 'productivity apps', 'entertainment apps']
   },
   {
     id: 'a2',
@@ -188,6 +208,7 @@ const shortcuts = [
     url: 'https://apps.apple.com/us/story/id1849362474',
     icon: '⭐',
     color: 'bg-gradient-to-br from-yellow-400 to-orange-500',
+    tags: ['apps', 'apple', 'best', 'ios', 'awards', 'winners', 'curated', 'top apps', 'must-have', 'editors choice', 'year in review', 'quality apps']
   },
   {
     id: 't1',
@@ -196,6 +217,7 @@ const shortcuts = [
     url: 'https://departures.to',
     icon: '✈️',
     color: 'bg-gradient-to-br from-sky-400 to-blue-600',
+    tags: ['apps', 'testflight', 'beta', 'ios', 'testing', 'pre-release', 'early access', 'development', 'unreleased', 'preview', 'feedback', 'app testing']
   },
   {
     id: 't2',
@@ -204,6 +226,7 @@ const shortcuts = [
     url: 'https://airport.community',
     icon: '🛫',
     color: 'bg-gradient-to-br from-indigo-400 to-purple-600',
+    tags: ['apps', 'testflight', 'beta', 'ios', 'community', 'discovery', 'early access', 'beta software', 'ios testing', 'explore apps', 'new apps']
   },
   {
     id: 't3',
@@ -212,6 +235,7 @@ const shortcuts = [
     url: 'https://findbeta.no',
     icon: '🔍',
     color: 'bg-gradient-to-br from-emerald-400 to-green-600',
+    tags: ['apps', 'testflight', 'beta', 'ios', 'links', 'search', 'directory', 'finder', 'beta database', 'iphone beta', 'early apps']
   },
   {
     id: 'd1',
@@ -220,6 +244,7 @@ const shortcuts = [
     url: 'https://developer.apple.com/testflight',
     icon: '👨‍💻',
     color: 'bg-gradient-to-br from-gray-600 to-gray-800',
+    tags: ['apps', 'apple', 'developer', 'ios', 'documentation', 'tools', 'xcode', 'swift', 'coding', 'api', 'frameworks', 'dev portal', 'engineering']
   },
   {
     id: 'd2',
@@ -228,6 +253,7 @@ const shortcuts = [
     url: 'https://routinehub.co/categories',
     icon: '🔍',
     color: 'bg-gradient-to-br from-indigo-400 to-violet-600',
+    tags: ['shortcuts', 'apple', 'discover', 'ios', 'categories', 'explore', 'automation hub', 'shortcut search', 'productivity hacks', 'ios tools']
   },
 ];
 
@@ -239,6 +265,7 @@ const community = [
     url: 'https://discord.gg/7wyK2Gcw2',
     icon: '💬',
     color: 'bg-gradient-to-br from-indigo-500 to-purple-600',
+    tags: ['discord', 'community', 'support', 'chat', 'server', 'benbot', 'help', 'social', 'member', 'voice chat', 'group chat', 'discussion forum', 'ai community', 'bot support']
   },
 ];
 
@@ -249,6 +276,7 @@ const socialLinks = [
     url: 'https://www.linkedin.com/in/benjaminjob',
     icon: '💼',
     color: 'bg-gradient-to-br from-blue-600 to-blue-800',
+    tags: ['social', 'linkedin', 'professional', 'career', 'network', 'jobs', 'profile', 'business', 'resume', 'hiring', 'work experience', 'corporate', 'connections']
   },
   {
     id: 'lt',
@@ -256,6 +284,28 @@ const socialLinks = [
     url: 'https://linktr.ee/benjaminjob',
     icon: '🔗',
     color: 'bg-gradient-to-br from-green-400 to-green-600',
+    tags: ['social', 'links', 'linktree', 'hub', 'all', 'collection', 'bio', 'landing page', 'portal', 'social links', 'contact', 'media hub']
+  },
+];
+
+const gitHubLinks = [
+  {
+    id: 'gh1',
+    title: "Benjamin's GitHub",
+    description: 'Personal GitHub profile',
+    url: 'https://github.com/benjaminjob',
+    icon: '👤',
+    color: 'bg-gradient-to-br from-gray-700 to-gray-900',
+    tags: ['github', 'profile', 'personal', 'code', 'git', 'repositories', 'dev', 'opensource', 'coding', 'software engineer', 'scripts', 'projects', 'programming', 'version control']
+  },
+  {
+    id: 'gh2',
+    title: "Ben & Ben Bot's GitHub",
+    description: 'Agent & Dashboard projects',
+    url: 'https://github.com/benjaminjob1',
+    icon: '👤🤖',
+    color: 'bg-gradient-to-br from-gray-700 to-gray-900',
+    tags: ['github', 'profile', 'bot', 'agent', 'code', 'git', 'projects', 'openclaw', 'ai', 'dashboard', 'automation', 'ai agent', 'nextjs', 'typescript', 'development', 'bot development']
   },
 ];
 
@@ -286,6 +336,47 @@ function LinkCard({ item }: { item: any }) {
   );
 }
 
+function LinkCardWithTags({ item, showTags }: { item: any; showTags: boolean }) {
+  const { isDark } = useTheme();
+  
+  return (
+    <motion.a
+      href={item.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      whileHover={{ scale: 1.02, y: -2 }}
+      whileTap={{ scale: 0.98 }}
+      className={`${item.color} relative overflow-hidden rounded-2xl p-4 text-white flex items-center gap-4 cursor-pointer transition-all duration-300 shadow-lg hover:shadow-xl`}
+    >
+      <div className="absolute inset-0 bg-white/10 backdrop-blur-sm opacity-0 hover:opacity-100 transition-opacity" />
+      <div className="relative w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center text-2xl shadow-inner shrink-0">
+        {item.icon}
+      </div>
+      <div className="relative flex-1 min-w-0">
+        <h3 className="font-semibold text-lg">{item.title}</h3>
+        <p className="text-white/80 text-sm truncate">{item.description}</p>
+        
+        {showTags && item.tags && (
+          <motion.div 
+            initial={{ opacity: 0, y: -5 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="flex flex-wrap gap-1 mt-2"
+          >
+            {item.tags.map((tag: string) => (
+              <span key={tag} className="text-[9px] bg-black/20 px-1.5 py-0.5 rounded-md backdrop-blur-sm border border-white/5 uppercase tracking-tighter">
+                {tag}
+              </span>
+            ))}
+          </motion.div>
+        )}
+      </div>
+      <span className="relative opacity-60 text-xl shrink-0">↗</span>
+    </motion.a>
+  );
+}
+
 function GlassCard({ title, children }: { title?: string; children: React.ReactNode }) {
   const { isDark } = useTheme();
   
@@ -304,14 +395,36 @@ function GlassCard({ title, children }: { title?: string; children: React.ReactN
 export default function Home() {
   const [showWorkInProgress, setShowWorkInProgress] = useState(false);
   const [showShortcuts, setShowShortcuts] = useState(false);
+  const [showTags, setShowTags] = useState(false);
+  const [search, setSearch] = useState("");
   const { isDark } = useTheme();
 
   return (
+    <>
     <Layout title="Ben's Hub" subtitle="Choose what you'd like to view">
+      {/* Global Control Bar */}
+      <div className="flex flex-wrap items-center justify-center gap-3 mb-6">
+        <motion.button 
+          onClick={() => setShowTags(!showTags)}
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
+          className={`flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 border ${
+            showTags 
+              ? "bg-blue-500 text-white border-blue-400 shadow-[0_0_15px_rgba(59,130,246,0.5)]" 
+              : isDark
+                ? "bg-gray-800/50 text-gray-400 border-gray-700 hover:border-gray-500"
+                : "bg-white text-gray-500 border-gray-200 hover:border-gray-300 shadow-sm"
+          }`}
+        >
+          <span>🏷️</span>
+          {showTags ? "Hide Tags" : "Show Tags"}
+        </motion.button>
+      </div>
+
       {/* Social Links */}
       <GlassCard title="Connect">
         {socialLinks.map((item) => (
-          <LinkCard key={item.id} item={item} />
+          <LinkCardWithTags key={item.id} item={item} showTags={showTags} />
         ))}
       </GlassCard>
 
@@ -340,30 +453,36 @@ export default function Home() {
         >
           <GlassCard title="🚧 In Development">
             {workInProgress.map((item) => (
-              <LinkCard key={item.id} item={item} />
+              <LinkCardWithTags key={item.id} item={item} showTags={showTags} />
             ))}
           </GlassCard>
         </motion.div>
       )}
 
+      {/* Jump to Dashboards */}
+      <div className="flex justify-center pt-2 pb-1">
+        <a href="#dashboards" onClick={e => { e.preventDefault(); document.getElementById('dashboards')?.scrollIntoView({ behavior: 'smooth' }); }}
+           className="text-xs text-gray-400 hover:text-gray-200">↓ Dashboards & GitHub Profiles</a>
+      </div>
+
       {/* Recent Section */}
       <GlassCard title="Recent">
         {recent.map((item) => (
-          <LinkCard key={item.id} item={item} />
+          <LinkCardWithTags key={item.id} item={item} showTags={showTags} />
         ))}
       </GlassCard>
 
       {/* My Projects */}
       <GlassCard title="My Projects">
         {myProjects.map((item) => (
-          <LinkCard key={item.id} item={item} />
+          <LinkCardWithTags key={item.id} item={item} showTags={showTags} />
         ))}
       </GlassCard>
 
       {/* Tech Sections */}
       <GlassCard title="Tech">
         {techSections.map((item) => (
-          <LinkCard key={item.id} item={item} />
+          <LinkCardWithTags key={item.id} item={item} showTags={showTags} />
         ))}
       </GlassCard>
 
@@ -383,7 +502,7 @@ export default function Home() {
       {showShortcuts && (
         <GlassCard>
           {shortcuts.map((item) => (
-            <LinkCard key={item.id} item={item} />
+            <LinkCardWithTags key={item.id} item={item} showTags={showTags} />
           ))}
         </GlassCard>
       )}
@@ -391,73 +510,181 @@ export default function Home() {
       {/* Community */}
       <GlassCard title="Community">
         {community.map((item) => (
-          <LinkCard key={item.id} item={item} />
+          <LinkCardWithTags key={item.id} item={item} showTags={showTags} />
         ))}
       </GlassCard>
 
+      {/* Dashboards jump link */}
+      <span id="dashboards" className="-mt-6 block" />
       <GlassCard title="📊 Dashboards">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <a href="https://stocks.benjob.me" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors">
-            <span className="text-2xl">📈</span>
-            <div>
-              <div className="text-sm font-medium">Stocks</div>
-              <div className="text-xs text-gray-400">stocks.benjob.me</div>
-            </div>
-          </a>
-          <a href="https://software.benjob.me" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors">
-            <span className="text-2xl">📦</span>
-            <div>
-              <div className="text-sm font-medium">Software Releases</div>
-              <div className="text-xs text-gray-400">software.benjob.me</div>
-            </div>
-          </a>
-          <a href="https://hardware.benjob.me" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors">
-            <span className="text-2xl">💻</span>
-            <div>
-              <div className="text-sm font-medium">Hardware Releases</div>
-              <div className="text-xs text-gray-400">hardware.benjob.me</div>
-            </div>
-          </a>
-          <a href="https://events.benjob.me" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors">
-            <span className="text-2xl">📅</span>
-            <div>
-              <div className="text-sm font-medium">Tech Events</div>
-              <div className="text-xs text-gray-400">events.benjob.me</div>
-            </div>
-          </a>
-          <a href="https://benjob.me/stats" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors">
-            <span className="text-2xl">📊</span>
-            <div>
-              <div className="text-sm font-medium">Stats Dashboard</div>
-              <div className="text-xs text-gray-400">benjob.me/stats</div>
-            </div>
-          </a>
+          {apps.map(item => (
+            <a key={item.id} href={item.url} target="_blank" rel="noopener noreferrer" className="flex flex-col p-3 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors">
+              <div className="flex items-center gap-3">
+                <span className="text-2xl">{item.icon}</span>
+                <div>
+                  <div className="text-sm font-medium">{item.title}</div>
+                  <div className="text-xs text-gray-400">{item.description}</div>
+                </div>
+              </div>
+              {showTags && item.tags && (
+                <div className="flex flex-wrap gap-1 mt-2 pt-2 border-t border-white/5">
+                  {item.tags.map(tag => (
+                    <span key={tag} className="text-[8px] bg-black/30 text-gray-300 px-1 py-0.5 rounded uppercase tracking-tighter">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </a>
+          ))}
         </div>
       </GlassCard>
 
       {/* GitHub */}
       <GlassCard title="GitHub">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <a
-            href="https://github.com/benjaminjob"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-3 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors"
-          >
-            <span className="text-2xl">👤</span>
-            <span className="text-sm font-medium">Benjamin's GitHub</span>
-          </a>
-          <a
-            href="https://github.com/benjaminjob1"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-3 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors"
-          >
-            <span className="text-2xl">👤🤖</span>
-            <span className="text-sm font-medium">Ben & Ben Bot's GitHub</span>
-          </a>
+          {gitHubLinks.map((item) => (
+            <a
+              key={item.id}
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col p-3 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors"
+            >
+              <div className="flex items-center gap-3">
+                <span className="text-2xl">{item.icon}</span>
+                <span className="text-sm font-medium">{item.title}</span>
+              </div>
+              {showTags && item.tags && (
+                <div className="flex flex-wrap gap-1 mt-2 pt-2 border-t border-white/5">
+                  {item.tags.map(tag => (
+                    <span key={tag} className="text-[8px] bg-black/30 text-gray-300 px-1 py-0.5 rounded uppercase tracking-tighter">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </a>
+          ))}
         </div>
       </GlassCard>
+
     </Layout>
+
+    {/* Sticky Search Footer */}
+    <div className="fixed bottom-0 left-0 right-0 z-50 bg-gray-900/95 backdrop-blur border-t border-gray-700 px-4 py-3">
+      <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="w-full sm:max-w-md relative flex items-center">
+          <input
+            type="text"
+            placeholder="Search sites..."
+            value={search}
+            onChange={e => setSearch(e.target.value)}
+            className="w-full bg-gray-800/80 border border-gray-600 rounded-xl px-4 py-2.5 pr-10 text-sm text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-1 focus:ring-blue-400/50 transition-all"
+          />
+          {search && (
+            <button
+              onClick={() => setSearch("")}
+              className="absolute right-3 p-1 rounded-full bg-gray-700/50 hover:bg-gray-700 text-gray-400 hover:text-white transition-colors"
+              title="Clear search"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          )}
+        </div>
+        <div className="hidden sm:flex items-center gap-6 text-[10px] text-gray-500 uppercase tracking-widest font-bold">
+          <p>© {new Date().getFullYear()} Benjamin Job</p>
+          <div className="flex gap-4">
+            <a href="https://benjob.me" className="hover:text-blue-400 transition-colors">Portfolio</a>
+            <a href="https://feedback.benjob.me" className="hover:text-blue-400 transition-colors">Feedback</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* Floating Search Results Overlay */}
+    {search && (
+      <div className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm pt-16 pb-16 overflow-y-auto">
+        <div className="max-w-5xl mx-auto px-4 py-4 space-y-3">
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex flex-col gap-1">
+              <p className="text-xs text-gray-400">Results for &ldquo;{search}&rdquo;</p>
+              <motion.button 
+                onClick={() => setShowTags(!showTags)}
+                whileTap={{ scale: 0.95 }}
+                className={`flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider transition-all duration-300 border ${
+                  showTags 
+                    ? "bg-blue-500/80 text-white border-blue-400/50" 
+                    : "bg-gray-800/80 text-gray-400 border-gray-700 hover:border-gray-600"
+                }`}
+              >
+                {showTags ? "Hide Tags" : "Show Tags"}
+              </motion.button>
+            </div>
+            <button onClick={() => setSearch("")} className="text-xs text-blue-400 hover:text-blue-300 px-2 py-1 bg-blue-400/10 rounded-lg">Clear</button>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {(() => {
+              const q = search.toLowerCase();
+              const allItems = [
+                ...apps,
+                ...myProjects,
+                ...techSections,
+                ...shortcuts,
+                ...workInProgress,
+                ...socialLinks,
+                ...gitHubLinks,
+              ];
+              
+              // Filter out duplicate URLs to prevent duplicates in search results
+              const seenUrls = new Set();
+              const filtered = allItems.filter(item => {
+                if (seenUrls.has(item.url)) return false;
+                seenUrls.add(item.url);
+                
+                const i = item as any;
+                return !q || 
+                  i.title.toLowerCase().includes(q) || 
+                  (i.description && i.description.toLowerCase().includes(q)) ||
+                  (i.tags && i.tags.some((t: string) => t.toLowerCase().includes(q)));
+              });
+              
+              if (filtered.length === 0) return <p className="text-sm text-gray-400 text-center py-4 col-span-2">No results found.</p>;
+              
+              return filtered.map(item => {
+                const i = item as any;
+                return (
+                  <a key={i.id} href={i.url} target="_blank" rel="noopener noreferrer"
+                    className={`${i.color} relative overflow-hidden rounded-2xl p-4 text-white flex flex-col cursor-pointer transition-all duration-300 shadow-lg hover:shadow-xl border border-white/10`}>
+                    <div className="flex items-center gap-4 w-full">
+                      <div className="relative w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center text-2xl shadow-inner shrink-0">
+                        {i.icon}
+                      </div>
+                      <div className="relative flex-1 min-w-0">
+                        <h3 className="font-semibold text-lg truncate">{i.title}</h3>
+                        {i.description && <p className="text-white/80 text-sm truncate">{i.description}</p>}
+                      </div>
+                    </div>
+                    {showTags && i.tags && (
+                      <div className="flex flex-wrap gap-1 mt-3 pt-3 border-t border-white/10">
+                        {i.tags.map((tag: string) => (
+                          <span key={tag} className="text-[9px] bg-black/20 px-1.5 py-0.5 rounded-md backdrop-blur-sm uppercase tracking-tighter">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                  </a>
+                );
+              });
+            })()}
+          </div>
+        </div>
+      </div>
+    )}
+    </>
   );
 }
